@@ -16,13 +16,10 @@ ln -s ~/Workspace/github.com/tobiaslocker/dotfiles/.global_extra_conf.py ~/.glob
 
 # Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # YouCompleteMe
-mkdir -p ~/Workspace/github.com/ycm-core
-cd ~/Workspace/github.com/ycm-core
-git clone https://github.com/ycm-core/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
-vim +PluginInstall +qall
 python3 install.py --clang-completer
 
 

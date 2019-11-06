@@ -7,6 +7,11 @@ sudo apt install curl
 sudo apt install build-essential cmake python3-dev
 sudo apt install python3-pip
 
+
+git config --global user.email "tobias@tobiaslocker.de"
+git config --global user.name "Tobias Locker"
+git config --global core.editor "vim"
+
 # My rc files
 mkdir -p ~/Workspace/github.com/tobiaslocker
 cd ~/Workspace/github.com/tobiaslocker

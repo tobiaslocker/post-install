@@ -6,6 +6,7 @@ sudo apt install git
 sudo apt install curl
 sudo apt install build-essential cmake python3-dev
 sudo apt install python3-pip
+sudo apt install vifm
 
 
 git config --global user.email "tobias@tobiaslocker.de"
@@ -18,6 +19,8 @@ cd ~/Workspace/src/github.com/tobiaslocker
 git clone https://github.com/tobiaslocker/dotfiles.git
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.vimrc ~/.vimrc
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.global_extra_conf.py ~/.global_extra_conf.py
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc ~/.bashrc
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -40,9 +43,15 @@ wget https://dl.google.com/go/go${GOVERSION}.${OS}-${ARCH}.tar.gz
 cd ~/Downloads
 sudo tar -C /usr/local -xzf go${GOVERSION}.${OS}-${ARCH}.tar.gz
 
+# Needed to install dependencies
+# of vim-go plugin 
+vim +GoInstallBinaries +qall
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install sources
+rustup component add rust-src
 
 # YouCompleteMe
-#cd ~/.vim/bundle/YouCompleteMe
-#python3 install.py --clang-completer
-
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --clang-completer --go-completer --rust-completer

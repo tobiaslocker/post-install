@@ -56,7 +56,7 @@ sudo tar -C /usr/local -xzf go${GOVERSION}.${OS}-${ARCH}.tar.gz
 vim +GoInstallBinaries +qall
 
 # Install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -vy
 rustup component add rust-src
 
 # YouCompleteMe

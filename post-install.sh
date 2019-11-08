@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
 sudo apt update
-
 sudo apt install -y vim git curl build-essential cmake python3-dev python3-pip vifm
 
 # git global settings
@@ -42,7 +40,6 @@ python3 -m pip install --user \
     keras \
     virtualenv
 
-
 # Install go
 GOVERSION=1.13.4
 OS=linux
@@ -62,4 +59,3 @@ rustup component add rust-src
 # YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --go-completer --rust-completer
-

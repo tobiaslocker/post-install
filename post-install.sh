@@ -1,7 +1,15 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install -y vim git curl build-essential cmake python3-dev python3-pip vifm
+sudo apt install -y \
+    vim \
+    git \
+    curl \
+    build-essential \
+    cmake \
+    python3-dev \
+    python3-pip \
+    vifm
 
 # git global settings
 git config --global user.email "tobias@tobiaslocker.de"
@@ -12,10 +20,14 @@ git config --global core.editor "vim"
 mkdir -p ~/Workspace/src/github.com/tobiaslocker
 cd ~/Workspace/src/github.com/tobiaslocker
 git clone https://github.com/tobiaslocker/dotfiles.git
-ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.vimrc ~/.vimrc
-ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.global_extra_conf.py ~/.global_extra_conf.py
-ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc ~/.bashrc
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.vimrc \
+    ~/.vimrc
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.global_extra_conf.py \
+    ~/.global_extra_conf.py
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bash_profile \
+    ~/.bash_profile
+ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc \
+    ~/.bashrc
 
 # Vundle and pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \

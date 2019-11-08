@@ -3,7 +3,7 @@
 
 sudo apt update
 
-sudo apt install vim git curl build-essential cmake python3-dev python3-pip vifm
+sudo apt install -y vim git curl build-essential cmake python3-dev python3-pip vifm
 
 # git global settings
 git config --global user.email "tobias@tobiaslocker.de"

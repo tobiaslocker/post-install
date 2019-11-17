@@ -30,6 +30,8 @@ rm ~/.bashrc
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc \
     ~/.bashrc
 
+source .bashrc
+
 # Vundle and pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim

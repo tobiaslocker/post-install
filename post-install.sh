@@ -24,8 +24,9 @@ ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.vimrc \
     ~/.vimrc
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.global_extra_conf.py \
     ~/.global_extra_conf.py
-ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bash_profile \
-    ~/.bash_profile
+#ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bash_profile \
+#    ~/.bash_profile
+rm ~/.bashrc
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc \
     ~/.bashrc
 

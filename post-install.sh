@@ -67,6 +67,8 @@ sudo tar -C /usr/local -xzf go${GOVERSION}.${OS}-${ARCH}.tar.gz
 # vim-go dependencies
 vim +GoInstallBinaries +qall
 
+source .bashrc
+
 # Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -vy
 rustup component add rust-src

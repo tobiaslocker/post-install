@@ -30,7 +30,7 @@ rm ~/.bashrc
 ln -s ~/Workspace/src/github.com/tobiaslocker/dotfiles/.bashrc \
     ~/.bashrc
 
-source .bashrc
+source ~/.bashrc
 
 # Vundle and pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
